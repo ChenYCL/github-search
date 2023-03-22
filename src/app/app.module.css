@@ -1,0 +1,51 @@
+.main {
+  @apply px-4 min-h-[100vh] sm:px-0 space-y-16 w-full bg-gray-700 md:px-5 pt-[280px] md:pt-[240px] ;
+  background-image: radial-gradient(#8fc912a6 1px, transparent 0),
+    radial-gradient(hwb(0 9% 7% / 0.1) 1px, transparent 0);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  -webkit-animation: slide 2s linear infinite;
+  animation: slide 4s linear infinite;
+}
+
+@keyframes slide {
+  100% {
+    background-position: 50px 0, 125px 25px;
+  }
+}
+
+.header {
+  @apply  z-[100] top-0 fixed pt-[40px] w-full mx-auto overflow-hidden;
+}
+
+
+.features {
+  @apply max-w-screen-lg xl:max-w-screen-xl mx-auto grid grid-cols-10 gap-4   max-h-[calc(100vh-400px)] overflow-y-auto;
+}
+
+.cardWrapper {
+  @apply col-span-10 sm:col-span-5 opacity-0 min-h-[146px];
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  to {
+    @apply opacity-100;
+  }
+}
+
+
+
+
+@keyframes bounce {
+  40% {
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(40px) rotate(-1deg);
+    transform: translateY(40px) rotate(-1deg);
+  }
+}
+
+.footer {
+  @apply pb-16 max-w-screen-lg xl:max-w-screen-xl mx-auto text-center sm:text-right text-gray-400 font-bold;
+}
