@@ -6,6 +6,7 @@ export default defineConfig((configEnv) => {
   const isDevelopment = configEnv.mode === "development";
 
   return {
+    outDir: "build",
     plugins: [react()],
     resolve: {
       alias: {
